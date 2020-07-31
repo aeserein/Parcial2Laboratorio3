@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/scripts.js" type="module" defer></script>
+    <!--<script src="./ts transpilado/select.js" type="module" defer></script>-->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Modelo de parcial</title>
+</head>
+<body id="body">
+    <header class="row / align-items-center / justify-content-between / w-100 / p-3">
+        <div class="ml-5">
+            <img src="./img/logo.png" alt="Logo">
+        </div>
+        <div class="mr-5">
+            <nav>
+                <a href="#" class="text-white">Nosotros</a>
+                <a href="#" class="pl-3 / text-white">Anuncios</a>
+                <a href="#" class="pl-3 / text-white">Blog</a>
+                <a href="#" class="pl-3 / text-white">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="d-flex / flex-column / row / align-items-center / w-100">
+        <h1 class="h1 / mt-4 / mb-4">Formulario de alta</h1>
+        <div id="divImgTitulo">
+            <img src="./img/animales ocaso.jpg" id="imgTitulo" alt="Animales Título">
+        </div>
+    </div>
+
+    <div class="container / row / justify-content-center">
+
+        <form action="#" class="col-8 mt-5 align-items-center" id="formulario" method="POST">
+            <fieldset class="p-3 / border / border-dark">
+                <legend class="w-auto">Información del anuncio</legend>
+                <div class="form-group"> <!-- Título -->
+                    <label for="txtTitulo" class="h6">Título:</label>
+                    <input type="text" id="txtTitulo" class="form-control" autocomplete="off" placeholder="Título">
+                </div>
+                <div class="form-group"> <!-- Descripción -->
+                    <label for="txtDescripcion" class="h6">Descripción:</label>
+                    <input type="text" id="txtDescripcion" class="form-control" autocomplete="off" placeholder="Descripción">
+                </div>
+                <div class="d-flex / flex-column / form-group"> <!-- Checkboxes-->
+                    <label class="h6">Animal:</label>
+                    <div class="d-flex / flex-row">
+                        <div class="col-4 offset-2 / d-flex / flex-column / align-items-center">
+                            <label for="rdPerro">Perro</label>
+                            <input type="radio" id="rdPerro" class="radio">
+                        </div>
+                        <div class="col-4 / d-flex / flex-column / align-items-center">
+                            <label for="rdGato">Gato</label>
+                            <input type="radio" id="rdGato" class="radio">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group"> <!-- Precio -->
+                    <label for="txtPrecio" class="h6">Precio:</label>
+                    <input type="text" id="txtPrecio" class="form-control" autocomplete="off" placeholder="Precio">
+                </div>
+                <div id="lineaInferior" class="row">    <!-- Línea inferior -->
+                    <div class="col">
+                        <img src="./img/perro.svg" alt="Perro ícono" height="20px" class="mb-2">
+                        <input type="text" id="txtRaza" class="form-control" autocomplete="off" placeholder="Raza">
+                    </div>
+                    <div class="col">
+                        <img src="./img/garza.svg" alt="Garza ícono" height="20px" class="mb-2">
+                        <input type="date" id="txtNacimiento" class="form-control" autocomplete="off">
+                    </div>
+                    <div class="col">
+                        <img src="./img/jeringa.svg" alt="Jeringa ícono" height="20px" class="mb-2">
+                        <select id="txtVacunas" class="form-control" name="vacunas">
+                            <option value="" disabled selected hidden>---Elegir---</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row">   <!-- Botones -->
+                <div class="col-10">
+                    <button id="btnGuardar" type="submit" class="col-sm-6 col-md-3 mb-1">
+                        <img src="./img/guardar.svg" alt="Guardar ícono" height="17px">
+                    </button>
+                    <button id="btnEliminar" type="button" class="col-sm-6 col-md-3 mb-1" hidden>Eliminar</button>
+                    <button id="btnCancelar" type="button" class="col-sm-6 col-md-3" hidden>Cancelar</button>
+                </div>
+            </div>
+            <div id="divSticker"> <!-- Sticker de gato feo -->
+                <img id="unSticker" src="./img/un sticker.png" alt="Un sticker">
+            </div>
+        </form>
+
+        <div class="row / col-11 / justify-content-around / border / border-dark / rounded-sm / bg-light / mt-4 / mb-4 / p-4">
+            <div class="row / col-12 / justify-content-around / mb-2">
+                <div class="col-md-3">
+                    <label for="selectAnimales" class="h6">Filtrar animal</label>
+                    <select id="selectAnimales" class="form-control / mb-2">
+                        <option disabled selected hidden>Elegir</option>
+                        <!--
+                        <option value="Todos">Todo</option>
+                        <option value="Perro">Perro</option>
+                        <option value="Gato">Gato</option>
+                        -->
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="h6">Promedio</label>
+                    <input type="text" id="txtPromedioPrecios" class="form-control" placeholder="Esperando..." disabled>
+                </div>
+            </div>
+
+            <div class="row / col-12 / justify-content-around / mb-2">
+                <div class="col-md-3">
+                    <label class="h6">Precio máximo</label>
+                    <input type="text" id="txtPrecioMaximo" class="form-control" placeholder="Esperando..." disabled>
+                </div>
+                <div class="col-md-3">
+                    <label class="h6">Precio mínimo</label>
+                    <input type="text" id="txtPrecioMinimo" class="form-control" placeholder="Esperando..." disabled>
+                </div>
+                <div class="col-md-3">
+                    <label class="h6">Vacunadas</label>
+                    <input type="text" id="txtPorcentajeVacunas" class="form-control" placeholder="Esperando..." disabled>
+                </div>
+            </div>
+
+        </div>  <!-- Filter -->
+
+        <div class="row / col-10">    <!-- Checkboxes -->
+            <div class="row / col-lg / d-flex / justify-content-between">
+                <div class="col-3 / d-flex / flex-column / align-items-center / divCheckboxes">
+                    <label>Título</label>
+                    <input class="form-check" type="checkbox" id="check0" checked>
+                </div>
+                <div class="col-3 / d-flex / flex-column / align-items-center / divCheckboxes">
+                    <label>Transacción</label>
+                    <input class="form-check" type="checkbox" id="check1" checked> 
+                </div>
+                <div class="col-3 / d-flex / flex-column / align-items-center / divCheckboxes">
+                    <label>Descripcion</label>
+                    <input class="form-check" type="checkbox" id="check2" checked>
+                </div>
+                <div class="col-3 / d-flex / flex-column / align-items-center / divCheckboxes">
+                    <label>Precio</label>
+                    <input class="form-check" type="checkbox" id="check3" checked>
+                </div>
+            </div>
+            <div class="row / col-lg / d-flex / justify-content-between">
+                <div class="col-3 / d-flex / flex-column / align-items-center / divCheckboxes">
+                    <label>Animal</label>
+                    <input class="form-check" type="checkbox" id="check4" checked>
+                </div>
+                <div class="col-3 / d-flex / flex-column / align-items-center / divCheckboxes">
+                    <label>Raza</label>
+                    <input class="form-check" type="checkbox" id="check5"checked>
+                </div>
+                <div class="col-3 / d-flex / flex-column / align-items-center / divCheckboxes">
+                    <label>Fecha Nac.</label>
+                    <input class="form-check" type="checkbox" id="check6" checked>
+                </div>
+                <div class="col-3 / d-flex / flex-column / align-items-center / divCheckboxes">
+                    <label>Vacuna</label>
+                    <input class="form-check" type="checkbox" id="check7" checked>
+                </div>
+            </div>
+        </div>
+
+        <table id="tabla" class="table / table-striped / table-light / table-hover / mb-4">    <!-- Tabla -->
+            <thead id="tablaHead">
+            </thead>
+            <tbody id="tablaBody">
+            </tbody>
+        </table>
+    
+        <div id="divSpinner"></div> <!-- Spinner -->
+
+    </div>
+
+    <div class="row">
+        <button id="btnTest" class="btn btn-primary" hidden>Test</button>
+    </div>
+
+    <footer class="row / align-items-center / justify-content-between / w-100 / h-100 / p-4 / mt-4">
+        <div class="ml-5">
+            <nav>
+                <a href="#" class="pr-3 / text-white">Nosotros</a>
+                <a href="#" class="pr-3 / text-white">Anuncios</a>
+                <a href="#" class="pr-3 / text-white">Blog</a>
+                <a href="#" class="text-white">Contacto</a>
+            </nav>
+        </div>
+        <div class="mr-5">
+            <p class="h6 / text-white">Todos los derechos reservados 2015 &copy;</p>
+        </div>
+    </footer>
+</body>
+</html>

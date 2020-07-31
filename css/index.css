@@ -1,0 +1,178 @@
+@charset "UTF-8";
+/* archivo con _ en el nombre para que no se compile */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background-color: #ffc799;
+}
+
+*::selection {
+  background-color: #ffc799;
+}
+
+#divImgTitulo {
+  width: 98.7vw;
+  background-color: #ffc799;
+  padding: 0px;
+  margin: 0px;
+}
+
+#divImgTitulo #imgTitulo {
+  width: inherit;
+  height: auto;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 450px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Row por defecto (horizontalmente) */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Alineación en el eje opuesto a flex-direction */
+  padding: 0px;
+  margin: 0px;
+  background-color: #fff0e3;
+}
+
+header, footer {
+  background-color: #ff4500;
+}
+
+header img, footer img {
+  height: 60px;
+}
+
+#divSticker {
+  width: 44px;
+  height: auto;
+  position: absolute;
+  top: -3px;
+  right: -5px;
+}
+
+#divSticker #unSticker {
+  width: 44px;
+  height: auto;
+  position: absolute;
+}
+
+button {
+  color: white;
+  border: 0px;
+  width: 100px;
+  height: 30px;
+}
+
+#btnGuardar {
+  background-color: #174781;
+}
+
+#btnEliminar {
+  background-color: #fe5314;
+}
+
+#btnCancelar {
+  background-color: #1056ff;
+}
+
+.divCheckboxes {
+  height: 100px;
+  white-space: nowrap;
+}
+
+#divSpinner {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+}
+
+#divSpinner #imgSpinner {
+  position: fixed;
+  pointer-events: none;
+  width: 120px;
+  height: 120px;
+  top: 50%;
+  left: 50%;
+  margin-top: -60;
+  margin-left: -60px;
+  /* La mitad del tamaño */
+}
+
+#divSpinner #imgBlanco {
+  padding: 0px;
+  margin: 0px;
+  pointer-events: none;
+  opacity: 0.9;
+  -webkit-backdrop-filter: blur(4.5px);
+          backdrop-filter: blur(4.5px);
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#tabla {
+  border-collapse: collapse;
+  position: relative;
+}
+
+#tabla #tablaHeader {
+  height: 50px;
+  background-color: #174781;
+  font-size: 17px;
+  color: white;
+}
+
+#tabla tr:nth-child(odd) {
+  background-color: #e4e4e4;
+}
+
+#tabla tr:nth-child(even) {
+  background-color: white;
+}
+
+#tabla tr:hover {
+  background-color: #ffc799;
+}
+
+#tabla th {
+  border: 1px solid black;
+}
+
+#tabla td {
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 800px) {
+  #lineaInferior {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #lineaInferior div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: 33%;
+        flex-basis: 33%;
+  }
+}
+/*# sourceMappingURL=index.css.map */
